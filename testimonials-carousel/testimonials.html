@@ -226,6 +226,14 @@
         </div>
       </div>
     </section>
-    
+	
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const testimonial_carousel = document.getElementById("testimonial_carousel");
+      testimonial_carousel.addEventListener("slid.bs.carousel", function(){
+        const activeTestimonial = this.querySelector(".active");
+        document.querySelector(".testimonial-img img").src = activeTestimonial.getAttribute("data-img");
+      });
+    </script>
   </body>
 </html>
