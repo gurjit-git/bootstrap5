@@ -10,6 +10,170 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+    <style>
+      section.testimonial-section {
+          /* min-height: 100vh; */
+          background: #0d2c3f;
+          color: #ffffff;
+          padding: 30px 0;
+          max-width: calc(100% - 100px);
+          margin: auto;
+          border-radius: 30px;
+          position: relative;
+      }
+      .img-box {
+          margin: auto;
+          /* border: 5px dashed #ffffff0f; */
+          border-radius: 100%;
+          padding: 52px;
+          position: relative;
+      }
+      .img-box:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: url('img/dashed-circle.png');
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 50%;
+          background-size: contain;
+          opacity: 0.7;
+          transform: translate(-50%, -50%);
+      }
+      .carousel-inner {
+          margin-bottom: 15px;
+      }
+      .img-box-inner {
+          display: flex;
+      }
+      .testimonial-img img {
+          border-radius: 100%;
+          width: 300px;
+          margin: auto;
+          height: 300px;
+      }
+      .testimonial-item p {
+          font-size: 20px;
+          margin-bottom: 1rem;
+      }
+      .testimonial-item span {
+          display: block;
+      }
+      span.testimonial-name {
+          font-size: 17px;
+          font-weight: 800;
+          color: #b6e2fd9c;
+          letter-spacing: 0.7px;
+      }
+      span.testimonial-desg {
+          font-size: 13px;
+          position: relative;
+          top: -2px;
+          left: 2px;
+          font-style: italic;
+      }
+      section.testimonial-section .carousel-control-next,
+      section.testimonial-section .carousel-control-prev {
+          position: relative;
+          background: #376886;
+          width: 30px;
+          height: 30px;
+          display: inline-flex;
+          border-radius: 100px;
+      }
+      section.testimonial-section .carousel-control-next-icon,
+      section.testimonial-section .carousel-control-prev-icon {
+        width: 1.3rem;
+      }
+      i.bi.bi-quote.q-left {
+          position: absolute;
+          right: 30px;
+          bottom: 15px;
+      }
+      i.bi.bi-quote.q-right {
+          position: relative;
+          left: -15px;
+      }
+      i.bi.bi-quote.q-left:before{
+          transform: rotate(180deg);
+      }
+      .bi-quote::before {
+          font-size: 85px;
+          opacity: 0.1;
+      }
+
+      @media (max-width: 600px){
+        .img-box{
+          padding: 25px;
+        }
+        .testimonial-item p {
+            font-size: 18px;
+        }
+        .bi-quote::before {
+            font-size: 40px;
+            opacity: 0.1;
+        }
+      }
+      @media (min-width: 1211px) {
+        section.testimonial-section .container {
+            z-index: 1;
+        }
+        section.testimonial-section.d-flex.align-items-center:after {
+            content: '';
+            display: block;
+            width: 150px;
+            position: absolute;
+            height: 100%;
+            background: url('img/arc.png');
+            top: 0;
+            z-index: 0;
+            transform: translate(-50%, 0px);
+            background-size: 99px 100%;
+            left: 50%;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+        }
+      }
+      @media (max-width: 991px){
+        .testimonial-img img{
+          width: 160px;
+          height: 160px;
+        }
+        .testimonial-img {
+            margin-bottom: 20px;
+        }
+        section.testimonial-section {
+            max-width: calc(100% - 40px);
+        }
+      }
+      @media (min-width: 992px) and (max-width: 1210px){
+        .testimonial-img img{
+          width: 180px;
+          height: 180px;
+        }
+        section.testimonial-section .container {
+            z-index: 1;
+        }
+        section.testimonial-section.d-flex.align-items-center:after {
+            content: '';
+            display: block;
+            width: 150px;
+            position: absolute;
+            height: 100%;
+            background: url('img/arc.png');
+            top: 0;
+            z-index: 0;
+            transform: translate(-45%, 0px);
+            background-size: 99px 100%;
+            left: 55%;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+        }
+      }
+
+    </style>
+
   </head>
   <body class="py-4">
 
@@ -62,6 +226,6 @@
         </div>
       </div>
     </section>
-
+    
   </body>
 </html>
